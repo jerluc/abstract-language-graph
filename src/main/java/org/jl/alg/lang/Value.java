@@ -12,7 +12,11 @@ public class Value<T extends Type> {
         this.value = value;        
     }
     
-    public T getValue() {
+    public T get() {
         return value;
+    }
+    
+    public T getValueAsType(Type<T> type) {
+        return type.cast(this);
     }
 }
